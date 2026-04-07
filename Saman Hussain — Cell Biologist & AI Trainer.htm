@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://samanhussain.netlify.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saman Hussain — Cell Biologist &amp; AI Trainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/css2" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: #f9f7f2; }
+body {
+  background: #f9f7f2;
+  color: #1a1916;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(249,247,242,0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(26,25,22,0.08);
+  padding: 0 clamp(1.5rem,5vw,4rem);
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem; font-weight: 400; color: #1a1916; text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.nav-links { display: flex; gap: 1.75rem; list-style: none; }
+.nav-links a {
+  font-size: 0.73rem; letter-spacing: 0.09em; text-transform: uppercase;
+  color: #8a8880; text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: #1a1916; }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  padding: 110px clamp(1.5rem,8vw,8rem) 80px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+.hero-text h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(3.2rem,6.5vw,5.8rem);
+  font-weight: 300; line-height: 1.03; letter-spacing: -0.015em;
+  color: #1a1916; margin-bottom: 0.35em;
+}
+.hero-text h1 em { font-style: italic; color: #3d6b4f; }
+.hero-role {
+  font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #9a9892; margin-bottom: 1.75rem;
+}
+.hero-text p {
+  font-size: 1.05rem; color: #6b6760; max-width: 44ch; margin-bottom: 2.5rem; line-height: 1.8;
+}
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #3d6b4f; text-decoration: none;
+  border-bottom: 1px solid #3d6b4f; padding-bottom: 2px;
+}
+.hero-visual { display: flex; justify-content: flex-end; align-items: center; }
+.hero-img-wrap {
+  position: relative;
+  width: clamp(240px,34vw,400px); aspect-ratio: 3/4;
+}
+.hero-img-wrap::before {
+  content: ''; position: absolute; inset: -10px -10px 10px 10px;
+  border: 1px solid #d4d2cc; border-radius: 2px; z-index: 0;
+}
+.hero-img-wrap img, .hero-img-placeholder {
+  position: relative; z-index: 1;
+  width: 100%; height: 100%; object-fit: cover; border-radius: 2px;
+}
+.hero-img-placeholder {
+  background: #dde8e2;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
+}
+.placeholder-text {
+  font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #3d6b4f; opacity: 0.65;
+}
+
+/* ── SHARED SECTION ── */
+section { padding: 90px clamp(1.5rem,8vw,8rem); border-top: 1px solid rgba(26,25,22,0.08); }
+section.alt { background: #ffffff; }
+
+.section-label {
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: #c0beba; margin-bottom: 3rem;
+}
+.section-label span {
+  display: inline-block; background: #1a1916; color: #f9f7f2;
+  padding: 2px 8px; border-radius: 2px; margin-right: 0.75rem; font-size: 0.63rem;
+}
+
+/* ── ABOUT ── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.about-text h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem,3.5vw,2.9rem); font-weight: 300; line-height: 1.2;
+  color: #1a1916; margin-bottom: 1.5rem;
+}
+.about-text p { color: #6b6760; margin-bottom: 1.2rem; font-size: 0.97rem; }
+.about-details { display: flex; flex-direction: column; }
+.detail-item {
+  display: grid; grid-template-columns: 110px 1fr; gap: 1rem;
+  padding: 1.2rem 0; border-bottom: 1px solid rgba(26,25,22,0.08);
+}
+.detail-item:first-child { padding-top: 0; }
+.detail-item:last-child { border-bottom: none; }
+.detail-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #c0beba; padding-top: 3px; }
+.detail-value { font-size: 0.92rem; color: #1a1916; line-height: 1.55; }
+.detail-value strong { display: block; font-weight: 500; color: #1a1916; margin-bottom: 0.1rem; }
+.detail-value small { color: #8a8880; font-size: 0.83rem; }
+
+/* ── PROJECT ENTRIES ── */
+.project-entry { padding: 3rem 0; border-bottom: 1px solid rgba(26,25,22,0.08); }
+.project-entry:last-child { border-bottom: none; }
+.project-entry h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.65rem; font-weight: 400; color: #1a1916;
+  margin-bottom: 1rem; line-height: 1.25;
+}
+.project-entry p { color: #6b6760; font-size: 0.95rem; max-width: 74ch; margin-bottom: 0.9rem; line-height: 1.8; }
+.project-entry p:last-child { margin-bottom: 0; }
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.media-grid img {
+  width: 100%; border-radius: 3px;
+  border: 1px solid rgba(26,25,22,0.08);
+  object-fit: cover; max-height: 300px;
+  background: #e8ede9;
+}
+.media-grid img[src=""] { display: none; }
+
+.video-wrap {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 1rem;
+}
+.video-item { display: flex; flex-direction: column; gap: 0.4rem; }
+.video-item span {
+  font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #9a9892;
+}
+.video-item iframe {
+  width: 100%; aspect-ratio: 16/9;
+  border: 1px solid rgba(26,25,22,0.08); border-radius: 3px;
+  background: #1a1916;
+}
+
+/* ── PUBLICATIONS ── */
+.pubs-list { display: flex; flex-direction: column; }
+.pub-item {
+  display: grid; grid-template-columns: 72px 1fr; gap: 2rem;
+  padding: 2rem 0; border-bottom: 1px solid rgba(26,25,22,0.08);
+}
+.pub-year { font-size: 0.76rem; letter-spacing: 0.06em; color: #c0beba; padding-top: 4px; }
+.pub-content h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem; font-weight: 400; color: #1a1916;
+  margin-bottom: 0.3rem; line-height: 1.4;
+}
+.pub-content .authors { font-size: 0.83rem; color: #8a8880; margin-bottom: 0.25rem; }
+.pub-content .authors strong { color: #1a1916; font-weight: 500; }
+.pub-journal { font-size: 0.8rem; color: #3d6b4f; }
+.pub-badge {
+  display: inline-block; margin-left: 0.5rem;
+  font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase;
+  background: #eef4f0; color: #3d6b4f; padding: 1px 6px; border-radius: 2px; vertical-align: middle;
+}
+.pub-link {
+  display: inline-block; margin-top: 0.45rem;
+  font-size: 0.73rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #8a8880; text-decoration: none;
+  border-bottom: 1px solid rgba(26,25,22,0.15); padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.pub-link:hover { color: #3d6b4f; border-color: #3d6b4f; }
+
+/* ── CV ── */
+.cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.cv-section h3 {
+  font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #c0beba; margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem; border-bottom: 1px solid rgba(26,25,22,0.08);
+}
+.cv-entry { padding: 1.2rem 0; border-bottom: 1px solid rgba(26,25,22,0.08); }
+.cv-entry:last-child { border-bottom: none; }
+.cv-entry-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.2rem; }
+.cv-entry h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: 1.05rem; color: #1a1916; }
+.cv-entry-year { font-size: 0.76rem; color: #c0beba; white-space: nowrap; padding-top: 3px; flex-shrink: 0; }
+.cv-entry .org-tag {
+  display: inline-block; font-size: 0.68rem; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #3d6b4f; margin-bottom: 0.3rem;
+}
+.cv-entry p { font-size: 0.86rem; color: #6b6760; line-height: 1.6; }
+.cv-download {
+  display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2.5rem;
+  padding: 0.7rem 1.5rem; border: 1px solid #1a1916;
+  font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #1a1916; text-decoration: none; transition: background 0.2s, color 0.2s;
+}
+.cv-download:hover { background: #1a1916; color: #f9f7f2; }
+
+/* ── CONTACT ── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.contact-left h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem,3.5vw,2.9rem); font-weight: 300; line-height: 1.2;
+  color: #1a1916; margin-bottom: 1rem;
+}
+.contact-left p { color: #6b6760; font-size: 0.97rem; max-width: 38ch; }
+.contact-links { display: flex; flex-direction: column; gap: 1px; background: rgba(26,25,22,0.08); border: 1px solid rgba(26,25,22,0.08); }
+.contact-link-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 1.5rem; background: #fff;
+  text-decoration: none; color: #1a1916; transition: background 0.2s;
+}
+.contact-link-item:hover { background: #eef4f0; }
+.contact-link-label { font-size: 0.73rem; letter-spacing: 0.1em; text-transform: uppercase; color: #9a9892; }
+.contact-link-value { font-size: 0.9rem; color: #1a1916; }
+.contact-link-arrow { color: #c0beba; }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid rgba(26,25,22,0.08);
+  padding: 2rem clamp(1.5rem,8vw,8rem);
+  display: flex; justify-content: space-between; align-items: center;
+  background: #f9f7f2;
+}
+footer p { font-size: 0.76rem; color: #c0beba; letter-spacing: 0.04em; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 800px) {
+  #hero { grid-template-columns: 1fr; padding-top: 90px; }
+  .hero-visual { justify-content: flex-start; margin-top: 1rem; }
+  .about-grid, .cv-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .pub-item { grid-template-columns: 52px 1fr; gap: 1rem; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://samanhussain.netlify.app/#hero" class="nav-name">Saman Hussain</a>
+  <ul class="nav-links">
+    <li><a href="https://samanhussain.netlify.app/#about">About</a></li>
+    <li><a href="https://samanhussain.netlify.app/#biology">Biology</a></li>
+    <li><a href="https://samanhussain.netlify.app/#ai">AI Projects</a></li>
+    <li><a href="https://samanhussain.netlify.app/#publications">Publications</a></li>
+    <li><a href="https://samanhussain.netlify.app/#cv">CV</a></li>
+    <li><a href="https://samanhussain.netlify.app/#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="border-top:none;">
+  <div class="hero-text">
+    <p class="hero-role">PhD Cell Biologist · AI Trainer · Harvard University</p>
+    <h1>Saman<br><em>Hussain</em></h1>
+    <p>A cell biologist working at the intersection of advanced live-cell microscopy, image analysis, and artificial intelligence — and currently training frontier language models to reason at the PhD level.</p>
+    <a href="https://samanhussain.netlify.app/#biology" class="hero-cta">Explore research →</a>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img-wrap">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/img_3429.jpg" alt="Saman Hussain" onerror="this.style.display=&#39;none&#39;; this.nextElementSibling.style.display=&#39;flex&#39;;">
+      <div class="hero-img-placeholder" style="display:none;">
+        <svg width="56" height="56" viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="32" rx="22" ry="11" stroke="#3d6b4f" stroke-width="1.5"></ellipse><path d="M54 32C58 28 62 24 62 32S58 36 54 32Z" fill="#3d6b4f" opacity=".4"></path><path d="M10 28C10 28 6 22 2 22M10 32H2M10 36C10 36 6 42 2 42" stroke="#3d6b4f" stroke-width="1.5" stroke-linecap="round"></path><line x1="22" y1="21" x2="22" y2="43" stroke="#3d6b4f" stroke-width="1" opacity=".5"></line><line x1="32" y1="21" x2="32" y2="43" stroke="#3d6b4f" stroke-width="1" opacity=".5"></line><line x1="42" y1="21" x2="42" y2="43" stroke="#3d6b4f" stroke-width="1" opacity=".5"></line><circle cx="50" cy="30" r="2" fill="#3d6b4f" opacity=".6"></circle></svg>
+        <span class="placeholder-text">Add your photo here</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label"><span>01</span>About Me</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Cell biology, microscopy &amp; the frontier of AI</h2>
+      <p>I am a cell biologist specialising in live fluorescence imaging, sensory hair cell biology, and the application of machine learning to quantitative biological problems. My research centres on the inner ear and lateral line — probing how hair cells develop, form synapses, and transduce mechanical stimuli into neural signals.</p>
+      <p>After completing my PhD at Harvard University, I joined the National Institutes of Health (NIDCD), where I developed imaging and computational pipelines to study ribbon synapse formation, spontaneous calcium dynamics, and vestibular kinocilia biology in zebrafish and mouse models.</p>
+      <p>I now work as an independent contractor with Mercor Intelligence, designing and evaluating PhD-level scientific problems used to train and benchmark frontier AI models including Google Gemini and ChatGPT on advanced reasoning in the life sciences.</p>
+    </div>
+    <div class="about-details">
+      <div class="detail-item">
+        <span class="detail-label">Current</span>
+        <div class="detail-value">
+          <strong>Independent Contractor</strong>
+          <small>Mercor Intelligence<br>LLM training — Google Gemini &amp; ChatGPT</small>
+        </div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Previous</span>
+        <div class="detail-value">
+          <strong>Neuroscientist</strong>
+          <small>NIH — NIDCD<br>Kindt Lab &amp; Kachar Lab, Bethesda MD</small>
+        </div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Education</span>
+        <div class="detail-value">
+          <strong>PhD, Biology</strong>
+          <small>Harvard University — Garner Lab</small>
+        </div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Focus</span>
+        <div class="detail-value">
+          <strong>Cell Biology &amp; AI</strong>
+          <small>Hair cell biology · Live imaging · ML for biology · LLM evaluation</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIOLOGY -->
+<section id="biology" class="alt">
+  <p class="section-label"><span>02</span>Biology</p>
+
+  <!-- Project 1 -->
+  <div class="project-entry">
+    <h3>Ribbon synapse formation in zebrafish hair cells</h3>
+    <p>Sensory cells in the retina and inner ear rely on ribbon synapses — highly specialised presynaptic structures — to faithfully relay auditory and visual signals to the brain. In hair cells, mature ribbons sit at the base of the cell near the presynaptic active zone (AZ), but the cellular events that build these synapses had remained unresolved.</p>
+    <p>Using high-resolution live-cell microscopy in larval zebrafish, we showed that early in hair cell development, many small ribbon precursors are distributed throughout the cytoplasm. Over time, these precursors consolidate into fewer, larger structures and migrate to the AZ. Tracking analyses demonstrated that precursors travel along an organised microtubule network and can fuse with one another en route. Pharmacological disruption of microtubules blocked precursor transport and fusion, preventing normal synapse formation.</p>
+    <p>Because ribbon synapse loss underlies age-related and noise-induced hearing loss, understanding how these synapses assemble is a critical step toward strategies for their repair.</p>
+    <!-- eLife paper videos -->
+    <div class="video-wrap">
+      <div class="video-item">
+        <span>Ribbon precursor dynamics — live imaging</span>
+        <iframe src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/figures.html" allowfullscreen="" title="Ribbon precursor live imaging"></iframe>
+      </div>
+      <div class="video-item">
+        <span>Microtubule network in hair cells</span>
+        <iframe src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/figures(1).html" allowfullscreen="" title="Microtubule network"></iframe>
+      </div>
+    </div>
+    <p style="font-size:0.82rem; color:#9a9892;">
+      Videos from: Hussain et al., <em>eLife</em> 2025. &nbsp;
+      <a href="https://elifesciences.org/articles/98119/figures" target="_blank" style="color:#3d6b4f; border-bottom:1px solid #3d6b4f; text-decoration:none;">View all figures &amp; videos →</a>
+    </p>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-entry">
+    <h3>Spontaneous calcium transients in hair cell stereocilia</h3>
+    <p>Hair cells transduce mechanical stimuli — sound waves and head movement — into electrical signals through mechanoelectrical transduction (MET). The MET apparatus sits within stereocilia, actin-filled projections on the hair cell surface linked by extracellular tip links. Deflection of the hair bundle changes tip-link tension, opening MET channels and admitting a cation influx that depolarises the cell.</p>
+    <p>Using genetically encoded Ca²⁺ sensors (GCaMP3, GCaMP6s) and high-performance confocal microscopy, we discovered spontaneous Ca²⁺ transients occurring within individual stereocilia in the complete absence of mechanical stimulation. This activity was abolished by MET channel blockers, implicating the channels as the source. Transients appeared in both developing and mature hair cells, in mouse cochlear explants and in live zebrafish, pointing to an evolutionarily conserved phenomenon.</p>
+    <p>Strikingly, transients were observed not only at the canonical MET site at stereocilia tips, but along their entire length and in the tallest stereocilia rows not previously thought to harbour MET channels. Activity persisted even after tip-link disruption by calcium chelation, indicating that channel opening can occur independently of tip-link tension. We propose that this spontaneous activity reflects stochastic MET channel gating and reveals a dispersed pool of channels or channel precursors within stereocilia, shedding new light on MET channel assembly, maturation, and turnover.</p>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="project-entry">
+    <h3>How bacterial cells establish and maintain rod shape</h3>
+    <div class="media-grid">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/2-1.jpg" alt="MreB fluorescence imaging in B. subtilis" loading="lazy">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/picture1-1.jpg" alt="Curvature sensing by MreB filaments" loading="lazy">
+    </div>
+    <p>Bacteria adopt remarkably consistent cell shapes that are critical to their physiology and survival. Rod shape — one of the most prevalent — depends on the actin homolog MreB, which coordinates the deposition of new cell wall material. How MreB knows where to act had been a long-standing question.</p>
+    <p>Our imaging of <em>Bacillus subtilis</em> revealed that MreB functions as a membrane curvature sensor: its filaments preferentially align along directions of maximal curvature on the cell surface, coupling their motion to the cell wall synthesis machinery and thereby reinforcing rod geometry. In spherical mutants lacking the rod shape, MreB moves randomly owing to the isotropic curvature. Yet these mutants retain the capacity to recover their rod form — driven by spontaneous local curvature fluctuations that create transient membrane bulges. MreB detects these bulges, orients cell wall synthesis along them, and progressively amplifies the asymmetry until a rod re-emerges.</p>
+    <p>Beyond developmental biology, these findings identify MreB and its curvature-sensing mechanism as potential antibiotic targets: shape mutants are structurally compromised and markedly more susceptible to treatment.</p>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="project-entry">
+    <h3>Collective motion in actin-myosin systems <em>in vitro</em></h3>
+    <p>Actomyosin networks drive cell motility, division, and tissue organisation — yet how the collective behaviour of many motors and filaments emerges from individual molecular interactions is not fully understood. We addressed this using a reconstituted gliding assay in which purified myosin II heavy meromyosins (HMMs) are surface-immobilised and fluorescent actin filaments are added. The introduction of ATP triggers filament gliding, recapitulating the essential mechanics of muscle contraction.</p>
+    <p>We found that increasing actin concentration promotes coherent, aligned filament motion, and that raising myosin density further enhances this order — but only up to a critical threshold, beyond which excess myosin induces disordered movement. To understand the microscopic origin of alignment, we analysed binary filament collisions: each collision was found to reduce the inter-filament angle, incrementally increasing local order. Crucially, this local alignment propagates across the system, demonstrating that global coherent motion is an emergent property arising from repeated pairwise interactions — a striking example of self-organisation at the molecular scale.</p>
+  </div>
+</section>
+
+<!-- AI PROJECTS -->
+<section id="ai">
+  <p class="section-label"><span>03</span>AI &amp; Image Analysis</p>
+
+  <!-- AI 1 -->
+  <div class="project-entry">
+    <h3>3D segmentation and tracking of zebrafish hair cells</h3>
+    <div class="media-grid">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/3dmasks3.png" alt="3D Cellpose segmentation masks — zebrafish hair cells" loading="lazy">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/3dmask.png" alt="Individual 3D hair cell mask rendered in colour" loading="lazy">
+    </div>
+    <p>Quantifying the behaviour of individual cells within a densely packed sensory epithelium requires robust three-dimensional segmentation. I implemented a pipeline using Cellpose — a generalised deep-learning segmentation framework — to identify and delineate individual zebrafish hair cells in volumetric confocal data.</p>
+    <p>Segmented cells are then linked across time points using TrackMate, enabling single-cell tracking through development. This approach makes it possible, for the first time, to follow the formation and maturation of new synapses within a defined single hair cell over an extended imaging session — opening a window onto synaptogenesis at single-cell resolution.</p>
+  </div>
+
+  <!-- AI 2 -->
+  <div class="project-entry">
+    <h3>Gesture-controlled protein visualisation with PyMOL and Leap Motion</h3>
+    <div class="media-grid">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/11.jpg" alt="Leap Motion controller for hands-free PyMOL navigation" loading="lazy">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/screenshot-2024-10-19-at-11.58.30e280afpm.png" alt="PyMOL protein structure rotated via hand gesture" loading="lazy">
+    </div>
+    <p>PyMOL is the gold-standard tool for visualising molecular structures, but navigating complex protein architectures during a live presentation — while simultaneously speaking to an audience — is awkward with a conventional mouse or trackpad.</p>
+    <p>I integrated PyMOL with the Leap Motion hand-tracking API to enable fully hands-free control: rotating, zooming, recolouring, and switching representations can all be performed through intuitive hand gestures. The result is a far more fluid presentation experience, allowing the structure to be explored naturally in real time without interrupting the narrative flow of a talk.</p>
+  </div>
+
+  <!-- AI 3 -->
+  <div class="project-entry">
+    <h3>Quantifying actin filament alignment via ellipse fitting</h3>
+    <div class="media-grid">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/picture1.png" alt="Standard deviation projection showing actin filament tracks" loading="lazy">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/picture2.png" alt="Ellipse fits overlaid on actin track projections" loading="lazy">
+    </div>
+    <p>Measuring the collective alignment of actin filaments in a motility assay presents a challenge: conventional particle-tracking methods require high temporal resolution and can be confounded by filament crossings. I developed an alternative approach that sidesteps particle detection entirely.</p>
+    <p>A standard-deviation projection of the timelapse collapses each filament's trajectory into a single bright stripe. These stripes are then fitted with ellipses and filtered by two criteria — minimum track length (major axis threshold) and aspect ratio (to exclude short or overlapping traces). The orientation angles of the surviving ellipses are collected, and their vector sum and angular standard deviation provide a single, interpretable metric of global alignment. The method is computationally inexpensive and robust to the density and overlap common in dense filament networks.</p>
+  </div>
+
+  <!-- AI 4 -->
+  <div class="project-entry">
+    <h3>2D bacterial cell segmentation and contour shape analysis</h3>
+    <div class="media-grid">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/3.png" alt="Phase contrast image with segmented bacterial cell outlines" loading="lazy">
+      <img src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/5.png" alt="Contour angle correlation comparing rod-shaped and mutant bacteria" loading="lazy">
+    </div>
+    <p>To rigorously compare the shapes of wild-type rod-shaped bacteria with shape mutants, I built a pipeline to segment phase contrast microscopy images and extract cell contours. For each contour, I computed the angle between successive tangent vectors at evenly spaced points around the cell periphery.</p>
+    <p>In wild-type rod-shaped cells, these angles remain highly correlated over long arc-length distances, reflecting the smooth, elongated geometry. In spherical or irregularly shaped mutants, the correlation decays rapidly. This angular correlation function provides a sensitive, quantitative descriptor of cell morphology that captures subtle shape differences invisible to simple length-width metrics.</p>
+  </div>
+
+  <!-- AI 5 -->
+  <div class="project-entry">
+    <h3>2D tracking and motion classification of MreB filaments</h3>
+    <p>MreB, the bacterial actin homolog responsible for rod shape, moves dynamically in the cell membrane — but not all motion is equal. To distinguish biologically meaningful directed motion from passive diffusion, I used the MATLAB tracking package uTrack to extract the positional coordinates of individual MreB foci over time.</p>
+    <p>For each track, I computed the mean-squared displacement (MSD) as a function of time lag and fitted the resulting curves to power-law models. Tracks with a super-diffusive exponent were classified as directional; the remainder as non-directional. For directional tracks, I then calculated pairwise angular correlations to assess whether filaments move coherently — a key indicator of coordinated cell wall synthesis activity.</p>
+  </div>
+
+  <!-- AI 6 -->
+  <div class="project-entry">
+    <h3>2D–3D particle tracking of cytoskeletal and synaptic proteins in hair cells</h3>
+    <p>To dissect the intracellular dynamics underlying ribbon synapse formation, I used Imaris to track two fluorescent reporters in live zebrafish hair cells: EB3-GFP, which labels the growing plus ends of microtubules, and RibA-RFP, which marks the core ribbon synapse component Ribeye.</p>
+    <p>From the extracted x, y, z coordinate trajectories I built several analysis pipelines in MATLAB. For EB3-GFP tracks, I computed the angle of each track relative to the cell's apical–basal axis, revealing that the majority of microtubules grow with their plus ends directed toward the cell base — the site of the presynaptic active zone. For RibA-RFP tracks, MSD-versus-time analysis demonstrated that ribbons undergo directed rather than diffusive motion, consistent with active microtubule-based transport toward their destination.</p>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="alt">
+  <p class="section-label"><span>04</span>Publications</p>
+  <div class="pubs-list">
+
+    <div class="pub-item">
+      <span class="pub-year">2025</span>
+      <div class="pub-content">
+        <h3>Spontaneous calcium transients in hair cell stereocilia</h3>
+        <p class="authors"><strong>S Hussain</strong>, M Sedlacek, R Cui, W Zhang-Hooks, DE Bergles, JB Shin, ...</p>
+        <span class="pub-journal">Scientific Reports 15 (1), 33660 <span class="pub-badge">Open Access</span></span><br>
+        <a href="https://www.nature.com/articles/s41598-025-17976-1" target="_blank" class="pub-link">View paper →</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2024</span>
+      <div class="pub-content">
+        <h3>Microtubule networks in zebrafish hair cells facilitate presynapse transport and fusion during development</h3>
+        <p class="authors"><strong>Hussain, S.</strong>, Pinter, K., Uhl, M., Kindt, K.S.</p>
+        <span class="pub-journal">eLife 13:RP98119 <span class="pub-badge">Open Access</span></span><br>
+        <a href="https://elifesciences.org/articles/98119" target="_blank" class="pub-link">View paper →</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2022</span>
+      <div class="pub-content">
+        <h3>In Vivo Analysis of Hair Cell Sensory Organs in Zebrafish: From Morphology to Function</h3>
+        <p class="authors"><strong>Hussain, S.</strong>, Aponte-Rivera, R., Barghout, R.M., Trapani, J.G., Kindt, K.S.</p>
+        <span class="pub-journal">In: Groves, A.K. (eds) Developmental, Physiological, and Functional Neurobiology of the Inner Ear. Neuromethods, 176, 175–220</span><br>
+        <a href="https://link.springer.com/protocol/10.1007/978-1-0716-2022-9_9" target="_blank" class="pub-link">View chapter →</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2018</span>
+      <div class="pub-content">
+        <h3>MreB Filaments Create Rod Shape by Aligning Along Principal Membrane Curvature</h3>
+        <p class="authors"><strong>Hussain, S.</strong>, Wivagg, C.N., Szwedziak, P., Wong, F., Izore, T., Renner, L.D., Amir, A., Löwe, J., Garner, E.C.</p>
+        <span class="pub-journal">eLife 2018;7:e32471 <span class="pub-badge">Open Access</span></span><br>
+        <a href="https://elifesciences.org/articles/32471" target="_blank" class="pub-link">View paper →</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2015</span>
+      <div class="pub-content">
+        <h3>Bacterial Filament Systems: Toward Understanding Their Emergent Behavior and Cellular Functions</h3>
+        <p class="authors">Eun, Y.J., Kapoor, M., <strong>Hussain, S.</strong>, Garner, E.C.</p>
+        <span class="pub-journal">Journal of Biological Chemistry, 290(28), 17181–17189</span><br>
+        <a href="https://www.jbc.org/article/S0021-9258(20)30846-0/fulltext" target="_blank" class="pub-link">View paper →</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2013</span>
+      <div class="pub-content">
+        <h3>Spatiotemporal Dynamics of Actomyosin Networks</h3>
+        <p class="authors"><strong>Hussain, S.</strong>, Molloy, J.E., Khan, S.M.</p>
+        <span class="pub-journal">Biophysical Journal, 105(6), 1456–1465</span><br>
+        <a href="https://www.cell.com/biophysj/fulltext/S0006-3495(13)00905-4" target="_blank" class="pub-link">View paper →</a>
+      </div>
+    </div>
+
+  </div>
+  <p style="margin-top:2rem; font-size:0.83rem; color:#c0beba;">
+    Full list on <a href="https://scholar.google.com/citations?user=s5QqiPIAAAAJ&amp;hl=en" target="_blank" style="color:#3d6b4f; text-decoration:none; border-bottom:1px solid #3d6b4f;">Google Scholar →</a>
+  </p>
+</section>
+
+<!-- CV -->
+<section id="cv">
+  <p class="section-label"><span>05</span>Curriculum Vitae</p>
+  <div class="cv-grid">
+    <div class="cv-section">
+      <h3>Experience</h3>
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h4>Independent AI Contractor</h4>
+          <span class="cv-entry-year">2024 – Present</span>
+        </div>
+        <span class="org-tag">Mercor Intelligence</span>
+        <p>Designing and evaluating PhD-level scientific problems to train and benchmark frontier LLMs — including Google Gemini and ChatGPT — on advanced reasoning in the life sciences.</p>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h4>Neuroscientist</h4>
+          <span class="cv-entry-year">2019 – 2024</span>
+        </div>
+        <span class="org-tag">NIH — NIDCD (Kindt Lab &amp; Kachar Lab)</span>
+        <p>Sensory hair cell research using advanced live fluorescence microscopy, electron microscopy, and custom computational pipelines in zebrafish and mouse.</p>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h4>PhD Researcher</h4>
+          <span class="cv-entry-year">2012 – 2018</span>
+        </div>
+        <span class="org-tag">Harvard University — Garner Lab</span>
+        <p>Doctoral research in bacterial cell biology, developing quantitative live fluorescence imaging and image analysis approaches to study cell shape and MreB dynamics.</p>
+      </div>
+    </div>
+    <div class="cv-section">
+      <h3>Education &amp; Skills</h3>
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h4>PhD, Biology</h4>
+          <span class="cv-entry-year">2018</span>
+        </div>
+        <span class="org-tag">Harvard University</span>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-header"><h4>Experimental Skills</h4></div>
+        <p>Confocal microscopy · Light-sheet microscopy · Electron microscopy · Calcium imaging (GCaMP) · Zebrafish genetics · CRISPR · Live imaging — purified proteins, bacteria, mammalian cell culture, mouse tissue, larval zebrafish</p>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-header"><h4>Computational &amp; AI Skills</h4></div>
+        <p>Python · Cellpose · Imaris · TrackMate · uTrack · FIJI/ImageJ · MATLAB · R · LLM evaluation &amp; RLHF · PyMOL</p>
+      </div>
+    </div>
+  </div>
+  <a href="https://samanhussain.netlify.app/#" class="cv-download">Download full CV (PDF) ↓</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="alt">
+  <p class="section-label"><span>06</span>Contact</p>
+  <div class="contact-grid">
+    <div class="contact-left">
+      <h2>Let's work<br><em>together</em></h2>
+      <p>Open to collaborations in cell biology, AI-driven image analysis, and LLM evaluation. Feel free to reach out.</p>
+    </div>
+    <div>
+      <div class="contact-links">
+        <a href="https://samanhussain.netlify.app/cdn-cgi/l/email-protection#70091f05025e151d11191c30151d11191c5e131f1d" class="contact-link-item">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value"><span class="__cf_email__" data-cfemail="88f1e7fdfaa6ede5e9e1e4c8ede5e9e1e4a6ebe7e5">[email&nbsp;protected]</span></span>
+          <span class="contact-link-arrow">→</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=s5QqiPIAAAAJ&amp;hl=en" target="_blank" class="contact-link-item">
+          <span class="contact-link-label">Google Scholar</span>
+          <span class="contact-link-value">View publications</span>
+          <span class="contact-link-arrow">→</span>
+        </a>
+        <a href="https://www.linkedin.com/in/saman-hussain-347063144/" target="_blank" class="contact-link-item">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">Connect professionally</span>
+          <span class="contact-link-arrow">→</span>
+        </a>
+        <a href="https://orcid.org/0000-0001-6687-7591" target="_blank" class="contact-link-item">
+          <span class="contact-link-label">ORCID</span>
+          <span class="contact-link-value">0000-0001-6687-7591</span>
+          <span class="contact-link-arrow">→</span>
+        </a>
+        <a href="https://github.com/" target="_blank" class="contact-link-item">
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">Code &amp; tools</span>
+          <span class="contact-link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Saman Hussain, PhD</p>
+  <p>Cell Biologist · AI Trainer · Harvard University</p>
+</footer>
+
+<script data-cfasync="false" src="./Saman Hussain — Cell Biologist &amp; AI Trainer_files/email-decode.min.js"></script><script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const </script></body></html>
