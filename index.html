@@ -276,6 +276,19 @@
     line-height: 1.3;
   }
 
+  .image-row {
+   display: flex;
+   gap: 15px;
+   justify-content: center;
+   align-items: flex-start;
+ }
+ 
+ .image-row img {
+   width: 48%;
+   height: auto;
+   border-radius: 8px;
+ }
+
   .research-card p { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.65; }
 
   .pubs-list { display: flex; flex-direction: column; }
@@ -598,7 +611,10 @@
       <!-- Project 1 -->
       <div class="project-card">
         <div class="project-media">
-          <img src="images/zebrafish-segmentation.jpg" alt="Zebrafish segmentation">
+          <div class="image-row">
+          <img src="images/3dmask.png" alt="Image 1">
+          <img src="images/3dmasks3.png" alt="Image 2">
+        </div>
           <!-- OR video:
           <video controls>
             <source src="videos/zebrafish.mp4" type="video/mp4">
